@@ -1,0 +1,68 @@
+<html>
+<head>
+        <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css"/>
+        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+</head>
+
+<script type="text/javascript" class="init">
+	$(document).ready(function() {
+		$('#question').DataTable({
+	    "searching": false,
+	    "paging": true
+	    });
+	} );
+</script>
+
+
+  <h1>CSV Import & Question Details</h1>
+  <div class="col-md-12 import">
+  <%= form_tag import_questions_path, multipart: true do%>
+	<div class="col-md-3">
+	  <%= file_field_tag :file%>
+	</div>
+	<div class="col-md-3">
+	  <%= submit_tag "Import CSV", :class => "btn btn-success", accept: 'csv'%>
+	</div>
+  <% end %>
+</div>
+</hr>
+<div class="col-md-12">
+<div class="table-responsive">
+<table id="question" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%>
+   <h4 class="panel-title h-arrow"><h1></h1></h4>
+     <thead>
+     <tr>
+      <th>Pri</th>
+      <th>Question</th>
+      <th>Teaming Stages</th>
+      <th>Appears</th>
+      <th>Frequency</th>
+      <th>Type</th>
+      <th>Role</th>
+      <th>Required</th>
+      <th>conditions</th>
+      <th>Mapping</th>
+     </tr>
+     </thead>
+    <tbody>
+    <% @questions.each do |i| %>
+    <tr>
+    <td><%= i.pri%></td>
+    <td><%= i.question %></td>
+    <td><%= i.teaming_stages %></td>
+    <td><%= i.appears %></td>
+    <td><%= i.frequency %></td>
+    <td><%= i.question_type %></td>
+    <td><%= i.role_name %></td>
+    <td><%= i.is_required %></td>
+    <td><%= i.conditions%></td>   
+    <td><%= i.mapping_name %></td>
+    </tr>
+    <% end %>
+    </tbody>
+   
+</table>
+</div>
+</div>

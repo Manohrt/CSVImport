@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pri: 1
+  question: MyString
+  teaming_stages: MyString
+  appears: 1
+  frequency: 1
+  type: 
+  is_required: false
+  conditions: MyString
+  role: one
+  mapping: one
+
+two:
+  pri: 1
+  question: MyString
+  teaming_stages: MyString
+  appears: 1
+  frequency: 1
+  type: 
+  is_required: false
+  conditions: MyString
+  role: two
+  mapping: two

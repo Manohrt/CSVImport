@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require dataTables/jquery.dataTables
+ *= require font-awesome
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+.table-container{
+	float:left;
+}
+.message {
+ color: red;
+  border-bottom-right-radius: 5px 5px;
+  border-top-right-radius: 5px 5px;
+  padding: 2px 5px;
+}
+.navbar-inverse {
+    background-color: #347B98;
+    border-color: #347B98;
+}
+.btn-default {
+ background-color: #347B98;
+	 color: #fff;
+}
+
+.btn:hover {
+    color: #fff !important;
+    background-color: #333 !important;
+   border-color: #347B98 !important;
+}
+.current {
+    font-style: normal;
+    font-weight: bold;
+    background: #347B98;
+    color: white;
+    border: 1px solid #347B98;
+}
+.digg_pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd;
+}
+.digg_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #347B98;
+    color: white;
+    border: 1px solid #347B98;
+}
+.digg_pagination a, .digg_pagination span, .digg_pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px;
+}
+.digg_pagination a {
+    text-decoration: none;
+    color: #105cb6;
+    border: 1px solid #9aafe5;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #347b98 !important;
+    background-color: #f5e7e7 !important;
+}
+
+.import {
+  background-color: #347b98;
+  border: 15px solid white;
+  padding: 2%;  
+}
