@@ -12,19 +12,11 @@ class Question < ApplicationRecord
   		question.appears = data[3]
   		question.frequency = data[4]
   		question.question_type = data[5]
-  		if Role.find_by_name(data[6])
-  		 role =Role.find_by_name(data[6])
-  		else
-  		 role = Role.create!(name: data[6])
-  		end
+  		role = Role.find_or_create_by(name: data[6])
   		question.role_id = role.id
   		question.is_required = data[7]
   		question.conditions = data[8]
-  		if Mapping.find_by_name(data[9])
-  		 mapping =Mapping.find_by_name(data[9])
-  		else
-  		 mapping = Mapping.create!(name: data[9])
-  		end
+  		mapping = Mapping.find_or_create_by(name: data[9])
   		question.mapping_id = mapping.id
         question.save
     end
